@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">FavoriteSongs_KT_MF</string>
+    <string name="app_name">FavoriteSongs</string>
     <string name="action_settings">Settings</string>
+    <string name="nameLabel">Name:</string>
+    <string name="artistLabel">Artist:</string>
+    <string name="ratingLabel">Rating:</string>
+    <string name="ratingExtraLabel">out of 5</string>
+    <string name="addButton">Add</string>
+    <string name="songNameHint">Name of the song</string>
+    <string name="songArtistHint">Artist of the song</string>
+    <string name="songRatingHint">Your rating of the song</string>
 </resources>
