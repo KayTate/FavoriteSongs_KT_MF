@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -23,7 +21,7 @@ public class RecordManager extends SQLiteOpenHelper {
     private static final String ARTIST = "artist";
     private static final String RATING = "rating";
 
-    public RecordManager(Context context) {
+    RecordManager(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
@@ -33,7 +31,8 @@ public class RecordManager extends SQLiteOpenHelper {
                 "create table %s(" +
                         "%s integer primary key autoincrement, " +
                         "%s text, " +
-                        "%s text)",
+                        "%s text, " +
+                        "%s integer)",
                 TABLE_NAME, ID, NAME, ARTIST, RATING);
         Log.w(ACTIVITY_TAG, String.format(Locale.US,
                 "creating database, sqlCreateStr: %s", sqlCreateStr));
@@ -47,7 +46,7 @@ public class RecordManager extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void insert(Song songRec) {
+    void insert(Song songRec) {
         String sqlInsertStr = String.format(Locale.US,
                 "insert into %s values( null, '%s', '%s', '%d' )",
                 TABLE_NAME, songRec.getName(), songRec.getArtist(), songRec.getRating());
@@ -86,6 +85,7 @@ public class RecordManager extends SQLiteOpenHelper {
                     cursor.getString(2),
                     Integer.parseInt(cursor.getString(3)));
         }
+        cursor.close();
         return songRec;
     }
 
@@ -108,6 +108,7 @@ public class RecordManager extends SQLiteOpenHelper {
                     Integer.parseInt(cursor.getString(3)));
             songRecList.add(songRec);
         }
+        cursor.close();
         db.close(); /* must be finished with the cursor before closing the db */
         Log.w(ACTIVITY_TAG, "processed results, closed db");
 
