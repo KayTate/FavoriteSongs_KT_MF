@@ -24,6 +24,10 @@
         <activity
             android:name=".AddItemActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".DeleteItemActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
