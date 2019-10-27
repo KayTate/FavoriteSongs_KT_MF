@@ -9,4 +9,6 @@
     <string name="songNameHint">Name of the song</string>
     <string name="songArtistHint">Artist of the song</string>
     <string name="songRatingHint">Your rating of the song</string>
+    <string name="add_button_name">Add</string>
+    <string name="delete_button_name">Delete</string>
 </resources>

@@ -15,7 +15,7 @@ public class Song {
         rating = input_rating;
     }
 
-    public int getId(){return id;};
+    public int getId(){return id;}
 
     public String getName(){return name;}
 
@@ -36,7 +36,7 @@ public class Song {
     }
 
     public String toString(){
-        return String.format(Locale.US, "%2d. %s by %s: %d",
+        return String.format(Locale.US, "%2d. %s by %s: %d star rating",
                 id, name, artist, rating);
     }
 }
