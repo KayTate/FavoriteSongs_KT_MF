@@ -1,0 +1,7 @@
+#Sat Oct 26 23:04:53 CDT 2019
+base.0=/Users/kaycee/Documents/GitHub/FavoriteSongs_KT_MF/FavoriteSongs_KT_MF/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/kaycee/Documents/GitHub/FavoriteSongs_KT_MF/FavoriteSongs_KT_MF/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
